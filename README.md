@@ -1,27 +1,128 @@
-# RiuFrontEnd
+# RIU Front End Challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.21.
+A pixel-perfect frontend layout challenge built with Angular 18 standalone components and Tailwind CSS v4. The project implements a responsive news/media page with three main sections: a featured article, an article grid, and a gallery.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tech Stack
 
-## Code scaffolding
+| Technology | Version | Purpose |
+|---|---|---|
+| Angular | 18 | Framework (standalone components) |
+| Tailwind CSS | v4 | Utility-first CSS (via `@tailwindcss/postcss`) |
+| TypeScript | 5.x | Language |
+| Google Fonts | — | Inter (body) + Figtree (display) |
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## Architecture
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The project follows an **Atomic Design** structure:
 
-## Running unit tests
+```
+src/app/
+  core/
+    tokens/
+      design-tokens.css       # CSS custom properties (colors, spacing, typography)
+  shared/
+    components/
+      atoms/                  # Smallest reusable units
+        badge-date/           # Calendar icon + date label
+        app-button/           # Primary CTA button
+        search-input/         # Search field with magnifier icon
+        image-placeholder/    # Grey placeholder with "IMAGE" label
+      molecules/              # Composed of atoms
+        article-card/         # Image + date badge + title + body
+        gallery-card/         # Image with gradient overlay + download link
+        section-header/       # Title + description + search input
+      organisms/              # Composed of molecules
+        featured-article/     # Hero card with image and CTA
+        article-grid/         # 3-column responsive grid of article cards
+        gallery-section/      # Mixed-layout gallery with 4 cards
+  pages/
+    home/
+      home.component.ts       # Assembles all three organisms
+  app.component.ts            # Root component — renders HomeComponent
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## Design Tokens
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+All design decisions are encoded as CSS custom properties in `src/app/core/tokens/design-tokens.css`.
 
-## Further help
+| Token | Value | Usage |
+|---|---|---|
+| `--color-primary` | `#E4002B` | Button background, accent |
+| `--color-surface` | `#FFFFFF` | Card backgrounds |
+| `--color-background` | `#F4F4F5` | Page / section background |
+| `--color-text-primary` | `#343A40` | Body text |
+| `--color-text-dark` | `#000000` | Headings |
+| `--font-body` | Inter | All body text and headings |
+| `--font-display` | Figtree | Image placeholder label |
+| `--radius-sm` | `8px` | Card / input border radius |
+| `--shadow-card` | `0px 2px 4px rgba(0,0,0,0.2)` | Featured card shadow |
+| `--container-max` | `1542px` | Max-width for page containers |
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## Responsive Breakpoints
+
+| Breakpoint | Min-width | Layout changes |
+|---|---|---|
+| Mobile (default) | — | Single column, stacked layout |
+| Tablet (`md`) | `768px` | 2-column article grid; flex row for gallery; larger headings |
+| Desktop (`lg`) | `1024px` | 3-column article grid; 4-column gallery; side-by-side featured card |
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js >= 18
+- npm >= 9
+
+### Install
+
+```bash
+npm install
+```
+
+### Development server
+
+```bash
+npx ng serve
+```
+
+Navigate to `http://localhost:4200/`. The application reloads automatically on file changes.
+
+### Build
+
+```bash
+npx ng build
+```
+
+Production artifacts are output to `dist/riu-front-end/`.
+
+---
+
+## Project Structure
+
+```
+/
+  angular.json              # Angular workspace configuration
+  tailwind.config.js        # Tailwind content paths and custom screens
+  .postcssrc.json           # PostCSS config — enables @tailwindcss/postcss
+  tsconfig.json             # TypeScript base config
+  src/
+    index.html              # HTML shell
+    main.ts                 # Application bootstrap
+    styles.css              # Global styles (Tailwind import + design tokens)
+    app/
+      app.component.ts      # Root component
+      app.config.ts         # Application providers
+      core/                 # App-wide singletons and tokens
+      shared/               # Reusable UI components (atoms → molecules → organisms)
+      pages/                # Route-level page components
+```
