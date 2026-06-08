@@ -1,5 +1,3 @@
-/* conditional height via @Input — Tailwind cannot dynamically apply responsive breakpoint classes
-   based on a runtime @Input value; the class binding + media queries in CSS is the only approach */
 @media (min-width: 768px) {
   .gallery-card--large { height: 378px; }
   .gallery-card--small { height: 203px; }
