@@ -18,10 +18,11 @@ import { Component } from '@angular/core';
       font-size: var(--text-base);
       border: none;
       border-radius: var(--radius-sm);
-      padding: 0 var(--space-2);
+      padding: 0 var(--space-4);
       height: 40px;
+      min-width: 120px;
       cursor: pointer;
-      align-self: flex-end;
+      align-self: flex-start;
     }
   `]
 })

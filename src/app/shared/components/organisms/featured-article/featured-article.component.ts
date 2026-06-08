@@ -97,6 +97,7 @@ import { ImagePlaceholderComponent } from '../../atoms/image-placeholder/image-p
       }
       .featured-card__image-wrapper {
         flex: 1;
+        min-width: 0;
       }
       .featured-card__image--tablet {
         display: none;
@@ -107,6 +108,11 @@ import { ImagePlaceholderComponent } from '../../atoms/image-placeholder/image-p
       }
       .featured-card__content {
         flex: 1;
+        min-width: 0;
+      }
+      .featured-card__title {
+        font-size: var(--text-4xl);
+        line-height: var(--leading-tight);
       }
     }
   `]
