@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { HomeComponent } from './pages/home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [HomeComponent],
+  template: `<app-home></app-home>`,
+  styles: []
 })
-export class AppComponent {
-  title = 'riu-front-end';
-}
+export class AppComponent {}
