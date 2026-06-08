@@ -54,14 +54,28 @@ import { GalleryCardComponent } from '../../molecules/gallery-card/gallery-card.
       color: var(--color-text-dark);
       margin: 0;
     }
-    /* Mobile: 2 col grid */
+    /* Mobile: horizontal scroll carousel */
     .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-6);
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: var(--space-4);
+      padding-bottom: var(--space-2);
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .gallery-grid::-webkit-scrollbar {
+      display: none;
     }
     .gallery-small-col {
       display: contents;
+    }
+    .gallery-item--large,
+    .gallery-item--small {
+      flex: 0 0 75vw;
+      max-width: 280px;
+      scroll-snap-align: start;
     }
     @media (min-width: 768px) {
       .gallery-section {
@@ -73,15 +87,23 @@ import { GalleryCardComponent } from '../../molecules/gallery-card/gallery-card.
       .gallery-section__title {
         font-size: var(--text-4xl);
       }
-      /* Tablet: flex row, large cards 284px, small stacked in last col */
+      /* Tablet: flex row, large cards 284px fixed, small stacked in last col */
       .gallery-grid {
-        display: flex;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        padding-bottom: 0;
         align-items: flex-start;
         gap: var(--space-6);
       }
       .gallery-item--large {
-        width: 284px;
-        flex-shrink: 0;
+        flex: 0 0 284px;
+        max-width: none;
+        scroll-snap-align: none;
+      }
+      .gallery-item--small {
+        flex: 1 1 auto;
+        max-width: none;
+        scroll-snap-align: none;
       }
       .gallery-small-col {
         display: flex;
@@ -94,19 +116,19 @@ import { GalleryCardComponent } from '../../molecules/gallery-card/gallery-card.
       .gallery-section {
         padding: var(--space-8) 0;
       }
-      /* Desktop: 4 equal columns */
+      /* Desktop: 4 equal columns via display:contents on wrapper */
       .gallery-grid {
-        display: flex;
-        gap: var(--space-6);
         align-items: stretch;
+        gap: var(--space-6);
       }
-      .gallery-item--large {
-        flex: 1;
-        width: auto;
+      .gallery-item--large,
+      .gallery-item--small {
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: none;
       }
       .gallery-small-col {
-        flex: 2;
-        flex-direction: row;
+        display: contents;
       }
     }
   `]

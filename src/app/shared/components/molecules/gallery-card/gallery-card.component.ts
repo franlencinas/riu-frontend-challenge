@@ -7,7 +7,7 @@ import { ImagePlaceholderComponent } from '../../atoms/image-placeholder/image-p
   imports: [ImagePlaceholderComponent],
   template: `
     <div class="gallery-card" [class.gallery-card--small]="small">
-      <app-image-placeholder [height]="small ? '203px' : '378px'" class="gallery-card__bg"></app-image-placeholder>
+      <app-image-placeholder height="100%" class="gallery-card__bg"></app-image-placeholder>
       <div class="gallery-card__overlay">
         <div class="gallery-card__content">
           <h3 class="gallery-card__title">Lorem ipsum dolor</h3>
@@ -29,10 +29,28 @@ import { ImagePlaceholderComponent } from '../../atoms/image-placeholder/image-p
       isolation: isolate;
       border-radius: var(--radius-sm);
       overflow: hidden;
+      height: 320px;
     }
     .gallery-card__bg {
       display: block;
       width: 100%;
+      height: 100%;
+    }
+    @media (min-width: 768px) {
+      .gallery-card {
+        height: 378px;
+      }
+      .gallery-card--small {
+        height: 203px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .gallery-card {
+        height: 482px;
+      }
+      .gallery-card--small {
+        height: 482px;
+      }
     }
     .gallery-card__overlay {
       position: absolute;
