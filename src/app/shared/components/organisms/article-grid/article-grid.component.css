@@ -1,0 +1,40 @@
+.grid-section {
+  background-color: var(--color-surface);
+  padding: var(--space-6) 0;
+}
+
+.grid-section__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .grid-section {
+    padding: var(--space-7) 0;
+  }
+
+  .grid-section__container {
+    padding: 0 var(--space-6);
+  }
+
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-section {
+    padding: var(--space-8) 0;
+  }
+
+  .article-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

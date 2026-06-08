@@ -1,0 +1,11 @@
+<section class="grid-section" aria-label="Article grid">
+  <div class="grid-section__container">
+    <app-section-header
+      title="Lorem Ipsum"
+      label="Lorem ipsum dolor sit amet, consectetur adipiscing.">
+    </app-section-header>
+    <div class="article-grid">
+      <app-article-card *ngFor="let card of cards"></app-article-card>
+    </div>
+  </div>
+</section>
