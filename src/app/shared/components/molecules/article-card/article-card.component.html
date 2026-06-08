@@ -2,7 +2,7 @@
   <app-image-placeholder class="block md:hidden" height="236px"></app-image-placeholder>
   <app-image-placeholder class="hidden md:block lg:hidden" height="189px"></app-image-placeholder>
   <app-image-placeholder class="hidden lg:block" height="277px"></app-image-placeholder>
-  <app-badge-date></app-badge-date>
-  <h3 class="font-bold text-[23px] leading-[25px] text-black m-0 md:text-[30px] md:leading-[38px]">Lorem ipsum dolor sit amet consectetur</h3>
-  <p class="font-normal text-base leading-normal text-[#343A40] m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <app-badge-date [label]="date"></app-badge-date>
+  <h3 class="font-bold text-[23px] leading-[25px] text-black m-0 md:text-[30px] md:leading-[38px]">{{ title }}</h3>
+  <p class="font-normal text-base leading-normal text-[#343A40] m-0 overflow-hidden line-clamp-6">{{ body }}</p>
 </article>

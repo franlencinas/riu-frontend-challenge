@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BadgeDateComponent } from '../../atoms/badge-date/badge-date.component';
 import { ImagePlaceholderComponent } from '../../atoms/image-placeholder/image-placeholder.component';
 
@@ -8,4 +8,8 @@ import { ImagePlaceholderComponent } from '../../atoms/image-placeholder/image-p
   imports: [BadgeDateComponent, ImagePlaceholderComponent],
   templateUrl: './article-card.component.html'
 })
-export class ArticleCardComponent {}
+export class ArticleCardComponent {
+  @Input() title: string = '';
+  @Input() body: string = '';
+  @Input() date: string = '';
+}

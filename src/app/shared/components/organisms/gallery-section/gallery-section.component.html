@@ -1,15 +1,25 @@
 <section class="bg-white py-8 md:py-12 lg:py-24" aria-label="Gallery">
   <div class="max-w-[1542px] mx-auto px-5 md:px-8">
     <header class="flex flex-col gap-6 mb-8">
-      <h2 class="font-bold text-[30px] text-black m-0 md:text-[48px]">Lorem Ipsum Gallery</h2>
-      <p class="font-normal text-base leading-normal text-black m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h2 class="font-bold text-[30px] text-black m-0 md:text-[48px]">{{ sectionTitle }}</h2>
+      <p class="font-normal text-base leading-normal text-black m-0">{{ sectionBody }}</p>
     </header>
     <div class="gallery-grid flex flex-row overflow-x-auto snap-x snap-mandatory gap-4 pb-2 md:overflow-x-visible md:snap-none md:pb-0 md:items-start md:gap-8 lg:items-stretch">
-      <app-gallery-card class="shrink-0 basis-[75vw] max-w-[280px] snap-start md:grow-0 md:shrink-0 md:basis-[284px] md:max-w-none md:snap-align-none lg:flex-1 lg:min-w-0 lg:max-w-none"></app-gallery-card>
-      <app-gallery-card class="shrink-0 basis-[75vw] max-w-[280px] snap-start md:grow-0 md:shrink-0 md:basis-[284px] md:max-w-none md:snap-align-none lg:flex-1 lg:min-w-0 lg:max-w-none"></app-gallery-card>
+      <app-gallery-card
+        *ngFor="let item of largeItems"
+        [title]="item.title"
+        [subtitle]="item.subtitle"
+        [small]="item.small"
+        class="shrink-0 basis-[75vw] max-w-[280px] snap-start md:grow-0 md:shrink-0 md:basis-[284px] md:max-w-none md:snap-align-none lg:flex-1 lg:min-w-0 lg:max-w-none"
+      ></app-gallery-card>
       <div class="contents md:flex md:flex-col md:gap-8 md:flex-1 lg:contents">
-        <app-gallery-card [small]="true" class="shrink-0 basis-[75vw] max-w-[280px] snap-start md:flex-auto md:max-w-none md:snap-align-none lg:flex-1 lg:min-w-0 lg:max-w-none"></app-gallery-card>
-        <app-gallery-card [small]="true" class="shrink-0 basis-[75vw] max-w-[280px] snap-start md:flex-auto md:max-w-none md:snap-align-none lg:flex-1 lg:min-w-0 lg:max-w-none"></app-gallery-card>
+        <app-gallery-card
+          *ngFor="let item of smallItems"
+          [title]="item.title"
+          [subtitle]="item.subtitle"
+          [small]="item.small"
+          class="shrink-0 basis-[75vw] max-w-[280px] snap-start md:flex-auto md:max-w-none md:snap-align-none lg:flex-1 lg:min-w-0 lg:max-w-none"
+        ></app-gallery-card>
       </div>
     </div>
   </div>

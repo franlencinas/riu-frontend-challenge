@@ -11,4 +11,6 @@ import { IconDownloadComponent } from '../../atoms/icon-download/icon-download.c
 })
 export class GalleryCardComponent {
   @Input() small: boolean = false;
+  @Input() title: string = '';
+  @Input() subtitle: string = '';
 }

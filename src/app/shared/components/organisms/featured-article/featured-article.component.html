@@ -7,10 +7,10 @@
         <app-image-placeholder class="hidden lg:block" height="416px"></app-image-placeholder>
       </div>
       <div class="flex flex-col gap-4 lg:flex-1 lg:min-w-0">
-        <app-badge-date></app-badge-date>
-        <h1 class="font-bold text-2xl leading-[28px] text-[#343A40] m-0 lg:text-[48px] lg:leading-[1.1]">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do</h1>
-        <p class="font-normal text-base leading-normal text-[#343A40] m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-        <app-button></app-button>
+        <app-badge-date [label]="date"></app-badge-date>
+        <h1 class="font-bold text-2xl leading-[28px] text-[#343A40] m-0 lg:text-[48px] lg:leading-[1.1]">{{ title }}</h1>
+        <p class="font-normal text-base leading-normal text-[#343A40] m-0">{{ body }}</p>
+        <app-button [label]="buttonLabel"></app-button>
       </div>
     </article>
   </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-badge-date',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './badge-date.component.html'
 })
-export class BadgeDateComponent {}
+export class BadgeDateComponent {
+  @Input() label: string = '';
+}
