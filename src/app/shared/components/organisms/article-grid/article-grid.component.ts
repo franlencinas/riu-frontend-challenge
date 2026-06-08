@@ -7,8 +7,7 @@ import { SectionHeaderComponent } from '../../molecules/section-header/section-h
   selector: 'app-article-grid',
   standalone: true,
   imports: [NgFor, ArticleCardComponent, SectionHeaderComponent],
-  templateUrl: './article-grid.component.html',
-  styleUrl: './article-grid.component.css'
+  templateUrl: './article-grid.component.html'
 })
 export class ArticleGridComponent {
   cards = [1, 2, 3, 4, 5, 6];

@@ -1,10 +1,10 @@
-<section class="grid-section" aria-label="Article grid">
-  <div class="grid-section__container">
+<section class="bg-white py-8 md:py-12 lg:py-24" aria-label="Article grid">
+  <div class="max-w-[1542px] mx-auto px-5 md:px-8">
     <app-section-header
       title="Lorem Ipsum"
       label="Lorem ipsum dolor sit amet, consectetur adipiscing.">
     </app-section-header>
-    <div class="article-grid">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       <app-article-card *ngFor="let card of cards"></app-article-card>
     </div>
   </div>

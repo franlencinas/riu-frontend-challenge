@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-icon-download',
   standalone: true,
   imports: [],
-  templateUrl: './icon-download.component.html',
-  styleUrl: './icon-download.component.css'
+  templateUrl: './icon-download.component.html'
 })
 export class IconDownloadComponent {}

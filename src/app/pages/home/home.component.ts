@@ -7,7 +7,6 @@ import { GallerySectionComponent } from '../../shared/components/organisms/galle
   selector: 'app-home',
   standalone: true,
   imports: [FeaturedArticleComponent, ArticleGridComponent, GallerySectionComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './home.component.html'
 })
 export class HomeComponent {}

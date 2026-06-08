@@ -1,15 +1,15 @@
-<section class="featured-section" aria-label="Featured article">
-  <div class="featured-section__container">
-    <article class="featured-card">
-      <div class="featured-card__image-wrapper">
-        <app-image-placeholder class="featured-card__image featured-card__image--mobile" height="200px"></app-image-placeholder>
-        <app-image-placeholder class="featured-card__image featured-card__image--tablet" height="360px"></app-image-placeholder>
-        <app-image-placeholder class="featured-card__image featured-card__image--desktop" height="416px"></app-image-placeholder>
+<section class="bg-[#F4F4F5] py-8 px-2.5 md:py-12 md:px-8 lg:py-24" aria-label="Featured article">
+  <div class="max-w-[1542px] mx-auto px-5 md:px-8">
+    <article class="bg-white rounded-lg shadow-[0px_2px_4px_rgba(0,0,0,0.2)] p-8 flex flex-col gap-8 lg:flex-row lg:items-stretch">
+      <div class="w-full lg:flex-1 lg:min-w-0">
+        <app-image-placeholder class="block md:hidden" height="200px"></app-image-placeholder>
+        <app-image-placeholder class="hidden md:block lg:hidden" height="360px"></app-image-placeholder>
+        <app-image-placeholder class="hidden lg:block" height="416px"></app-image-placeholder>
       </div>
-      <div class="featured-card__content">
+      <div class="flex flex-col gap-4 lg:flex-1 lg:min-w-0">
         <app-badge-date></app-badge-date>
-        <h1 class="featured-card__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do</h1>
-        <p class="featured-card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <h1 class="font-bold text-2xl leading-[28px] text-[#343A40] m-0 lg:text-[48px] lg:leading-[1.1]">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do</h1>
+        <p class="font-normal text-base leading-normal text-[#343A40] m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
         <app-button></app-button>
       </div>
     </article>

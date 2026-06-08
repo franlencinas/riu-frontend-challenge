@@ -7,7 +7,6 @@ import { ImagePlaceholderComponent } from '../../atoms/image-placeholder/image-p
   selector: 'app-featured-article',
   standalone: true,
   imports: [BadgeDateComponent, AppButtonComponent, ImagePlaceholderComponent],
-  templateUrl: './featured-article.component.html',
-  styleUrl: './featured-article.component.css'
+  templateUrl: './featured-article.component.html'
 })
 export class FeaturedArticleComponent {}

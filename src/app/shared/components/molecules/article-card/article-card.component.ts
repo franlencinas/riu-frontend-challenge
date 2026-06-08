@@ -6,7 +6,6 @@ import { ImagePlaceholderComponent } from '../../atoms/image-placeholder/image-p
   selector: 'app-article-card',
   standalone: true,
   imports: [BadgeDateComponent, ImagePlaceholderComponent],
-  templateUrl: './article-card.component.html',
-  styleUrl: './article-card.component.css'
+  templateUrl: './article-card.component.html'
 })
 export class ArticleCardComponent {}

@@ -4,8 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'app-image-placeholder',
   standalone: true,
   imports: [],
-  templateUrl: './image-placeholder.component.html',
-  styleUrl: './image-placeholder.component.css'
+  templateUrl: './image-placeholder.component.html'
 })
 export class ImagePlaceholderComponent {
   @Input() height: string = '200px';

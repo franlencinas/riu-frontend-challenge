@@ -5,8 +5,7 @@ import { SearchInputComponent } from '../../atoms/search-input/search-input.comp
   selector: 'app-section-header',
   standalone: true,
   imports: [SearchInputComponent],
-  templateUrl: './section-header.component.html',
-  styleUrl: './section-header.component.css'
+  templateUrl: './section-header.component.html'
 })
 export class SectionHeaderComponent {
   @Input() title: string = 'Lorem Ipsum';

@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-badge-date',
   standalone: true,
   imports: [],
-  templateUrl: './badge-date.component.html',
-  styleUrl: './badge-date.component.css'
+  templateUrl: './badge-date.component.html'
 })
 export class BadgeDateComponent {}
