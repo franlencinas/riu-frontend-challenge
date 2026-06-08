@@ -1,4 +1,3 @@
-/* ::placeholder pseudo-element — Tailwind v4 placeholder: variant generates a CSS parsing warning in this project's PostCSS setup */
 .search-input::placeholder {
   color: var(--color-image-label);
 }

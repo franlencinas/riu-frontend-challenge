@@ -1,5 +1,4 @@
 :root {
-  /* Colors */
   --color-primary:        #E4002B;
   --color-surface:        #FFFFFF;
   --color-background:     #F4F4F5;
@@ -9,11 +8,9 @@
   --color-image-bg:       #BDBDBD;
   --color-image-label:    #A6A2A2;
 
-  /* Typography */
   --font-body:    'Inter', sans-serif;
   --font-display: 'Figtree', sans-serif;
 
-  /* Font sizes */
   --text-sm:   14px;
   --text-base: 16px;
   --text-lg:   18px;
@@ -22,13 +19,11 @@
   --text-3xl:  30px;
   --text-4xl:  48px;
 
-  /* Line heights */
   --leading-tight:  1.1;
   --leading-snug:   1.17;
   --leading-normal: 1.5;
   --leading-loose:  1.27;
 
-  /* Spacing */
   --space-1:  4px;
   --space-2:  8px;
   --space-3:  10px;
@@ -38,12 +33,9 @@
   --space-7:  48px;
   --space-8:  96px;
 
-  /* Radius */
   --radius-sm: 8px;
 
-  /* Shadow */
   --shadow-card: 0px 2px 4px rgba(0, 0, 0, 0.2);
 
-  /* Container */
   --container-max: 1542px;
 }

@@ -1,6 +1,7 @@
 {
   "name": "riu-front-end",
   "version": "0.0.0",
+  "description": "Frontend challenge implementation — Angular 18 + Tailwind CSS v4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

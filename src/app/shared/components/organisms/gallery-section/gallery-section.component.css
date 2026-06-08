@@ -1,4 +1,3 @@
-/* scrollbar-hide — no Tailwind utility exists for removing the scrollbar UI element */
 .gallery-grid {
   scrollbar-width: none;
   -ms-overflow-style: none;
