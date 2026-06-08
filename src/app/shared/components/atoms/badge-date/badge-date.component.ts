@@ -1,0 +1,39 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-badge-date',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    <div class="badge-date">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="17" rx="2" stroke="#1C274C" stroke-width="1.5"/>
+        <path d="M3 9H21" stroke="#1C274C" stroke-width="1.5"/>
+        <path d="M8 2V4" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M16 2V4" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="8" cy="13" r="1" fill="#1C274C"/>
+        <circle cx="12" cy="13" r="1" fill="#1C274C"/>
+        <circle cx="16" cy="13" r="1" fill="#1C274C"/>
+        <circle cx="8" cy="17" r="1" fill="#1C274C"/>
+        <circle cx="12" cy="17" r="1" fill="#1C274C"/>
+        <circle cx="16" cy="17" r="1" fill="#1C274C"/>
+      </svg>
+      <span class="badge-date__text">Lorem ipsum dolor sit amet.</span>
+    </div>
+  `,
+  styles: [`
+    .badge-date {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .badge-date__text {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: var(--text-base);
+      color: var(--color-text-primary);
+    }
+  `]
+})
+export class BadgeDateComponent {}
